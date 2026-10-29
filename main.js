@@ -1,11 +1,10 @@
-// main.js
 import { getStudentsAPI, addStudentsAPI } from './api.js';
 
-// Test Case 1: Display initial populated database
+// test 1
 console.log("--- Test Case 1: Initial Database ---");
 console.log(getStudentsAPI());
 
-// Test Case 2: Create a new student and display the newly added student
+// test 2
 console.log("\n--- Test Case 2: Add New Student ---");
 const newStudent = addStudentsAPI({
   firstName: "Keanu Dave",
@@ -14,6 +13,6 @@ const newStudent = addStudentsAPI({
 });
 console.log("Newly Added Student:", newStudent);
 
-// Test Case 3: Display the updated database
+// test 2
 console.log("\n--- Test Case 3: Updated Database ---");
 console.log(getStudentsAPI());
