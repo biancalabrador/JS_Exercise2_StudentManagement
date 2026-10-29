@@ -5,7 +5,7 @@ console.log("---Initial Database ---");
 console.log(getStudentsAPI());
 
 // test 2
-console.log("\n--- Test Case 2: Add New Student ---");
+console.log("\n---Add New Student ---");
 const newStudent = addStudentsAPI({
   firstName: "Keanu Dave",
   lastName: "Andal",
