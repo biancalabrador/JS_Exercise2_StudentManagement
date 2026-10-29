@@ -1,4 +1,3 @@
-// app.js
 import { getStudentsAPI, addStudentsAPI } from './api.js';
 
 let localStudents = [];
@@ -10,7 +9,7 @@ const renderTable = (dataArray) => {
   // clear table body contents
   studentTableBody.innerHTML = '';
 
-  // check if empty or missing
+  // check if array is empty or missing
   if (!dataArray || dataArray.length === 0) {
     const emptyRow = document.createElement('tr');
     emptyRow.innerHTML = `
@@ -45,20 +44,20 @@ studentForm.addEventListener('submit', (event) => {
     email: emailInput.value.trim()
   };
 
-  // client-side validation
+  // Client-side validation
   if (!studentData.firstName || !studentData.lastName || !studentData.email) {
     alert('Please fill out all input fields!');
     return;
   }
 
-  // pass student data to API
+  // Pass student data to API
   const savedStudent = addStudentsAPI(studentData);
 
-  // update and refresh ui
+  // Update local storage and refresh UI
   localStudents.push(savedStudent);
   renderTable(localStudents);
 
-  // reset input
+  // Reset input form
   studentForm.reset();
 });
 
@@ -67,4 +66,9 @@ const initApp = () => {
   renderTable(localStudents);
 };
 
-initApp();
+// Safely initialize application after DOM finishes loading
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
