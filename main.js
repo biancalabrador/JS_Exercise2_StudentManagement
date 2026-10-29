@@ -8,9 +8,9 @@ console.log(getStudentsAPI());
 // Test Case 2: Create a new student and display the newly added student
 console.log("\n--- Test Case 2: Add New Student ---");
 const newStudent = addStudentsAPI({
-  firstName: "Pamela",
-  lastName: "Magnifico",
-  email: "pamela.magnifico@example.com"
+  firstName: "Keanu Dave",
+  lastName: "Johnson",
+  email: "keanu.johnson@example.com"
 });
 console.log("Newly Added Student:", newStudent);
 

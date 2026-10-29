@@ -1,24 +1,21 @@
-// api.js
-
 // Prepopulated array storing student objects
 const mockStudentDb = [
   {
-    id: 1,
-    firstName: "John",
-    lastName: "Doe",
-    email: "john.doe@example.com"
+    id: 11112003,
+    firstName: "Pamela Kaye",
+    lastName: "Magnifico",
+    email: "pamela.magnifico@example.com"
   },
   {
-    id: 2,
-    firstName: "Jane",
-    lastName: "Smith",
-    email: "jane.smith@example.com"
+    id: 10232003,
+    firstName: "Jhqq Phyrr",
+    lastName: "Avellana",
+    email: "jhqqphyrr.avellana@example.com"
   }
 ];
 
 /**
  * Simulates a GET request to retrieve all students.
- * @returns {Array} Current array of students.
  */
 export function getStudentsAPI() {
   return mockStudentDb;
